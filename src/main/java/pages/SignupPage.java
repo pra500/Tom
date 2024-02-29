@@ -38,11 +38,7 @@ private By state=By.xpath("//select[@id='state']");
 
 private By hobbies=By.xpath("//select[@id='hobbies']");
 
-//private By signup=By.xpath("//button[@type='submit']");
-
-//private By signup=By.xpath("//button[@class='submit-btn']");
-
-    
+   
 private By signup=By.cssSelector("button[type='submit']");
 
 
@@ -51,11 +47,8 @@ private By successful=By.xpath("//h2[text()='Sign In']");
 
 	
 public void signupenterdetails(String NAme, String EMail) throws InterruptedException
-{
-
-	
-	//Utility.waitForWebElement(driver, signuplink).click();
-	
+{	
+		
 	Utility.waitForWebElement(driver, name).sendKeys(NAme);
 
 	Utility.waitForWebElement(driver, email).sendKeys(EMail);
@@ -78,25 +71,6 @@ public void signupenterdetails(String NAme, String EMail) throws InterruptedExce
 	sel1.selectByVisibleText("Singing");
 	
 			
-	//signup
-	
-	//Thread.sleep(3000);
-	
-	
-	
-	//driver.findElement(signup).click();
-	//Utility.waitForWebElement(driver, signup).click();
-	
-	
-	
-//	WebDriverWait wait2 = new WebDriverWait(driver, 10);
-//	wait2.until(ExpectedConditions.elementToBeClickable(By.id("navigationPageButton")));
-	
-	//JavascriptExecutor js=(JavascriptExecutor)driver;
-	//js.executeScript("arguments[0].click();", signup);
-	
-	
-	
 	
 //alternatives:
 //	
@@ -135,9 +109,14 @@ public void signupenterdetails(String NAme, String EMail) throws InterruptedExce
  
 	
 
-public HomePage navigateToHomePage() throws InterruptedException {	
+/*
+ * public HomePage navigateToHomePage() throws InterruptedException {
+ * Thread.sleep(12000); return new HomePage(driver); }
+ */
+
+public LoginPage navigateToLoginPage() throws InterruptedException {	
 	Thread.sleep(12000);
-	return new HomePage(driver);
+	return new LoginPage(driver);
 }
 
 
