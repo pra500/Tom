@@ -28,10 +28,11 @@ public class HomePage {
 	
 	private By selenium= By.xpath("//h2[normalize-space()='Selenium']");
 	
-	private By addtocart= By.xpath("//button[contains(text(),'Add to Cart')]");
+	private By playwright= By.xpath("//h2[normalize-space()='Playwright']");
 	
 	
 	
+		
 	public void homedata() throws InterruptedException
 	{
 			
@@ -41,7 +42,7 @@ public class HomePage {
 		
 		Utility.waitForWebElement(driver, selenium).isDisplayed();
 		
-		Utility.waitForWebElement(driver, addtocart).isDisplayed();		
+		Utility.waitForWebElement(driver, playwright).isDisplayed();		
 		
 		
 	}
@@ -60,17 +61,15 @@ public class HomePage {
 			 * }
 			 */
 				
-
-
 	
 
 	
-	public HomePage navigateToHomePage() {		
-		return new HomePage(driver);
+	public CartPage navigateToCartPage() throws InterruptedException {	
+		Thread.sleep(12000);
+		return new CartPage(driver);
 	}
 	
-	
-	
-	
+		
+		
 
 }

@@ -23,6 +23,8 @@ public class SignupPage {
 	}
 		
 	
+	
+	
 		
 	private By name=By.xpath("//input[@id='name']");
 	

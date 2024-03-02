@@ -68,6 +68,10 @@ ChromeOptions opt=new ChromeOptions();
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(ConfigReader.getProperty("implicitWait"))));
 		
+		
+		
+		
+		driver.manage().deleteAllCookies();
 		driver.get(appURL);
 		
 		return driver;

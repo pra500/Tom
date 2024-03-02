@@ -5,13 +5,33 @@ import org.testng.annotations.DataProvider;
 public class CustomDataProvider {
 	
 	
-	//@DataProvider(name="UserData")
+	
 	@DataProvider(name="userData")
 	public static Object[][] getUserData()
 	{
-		Object arr[][]=ExcelReader.getData("Users");
+		Object arr[][]=ExcelReader.getData("Users");	
 		
 		return arr;
 	}
+	
+	@DataProvider(name="userData1")
+	public static Object[][] getUserData1()
+	{
+		
+		Object arr[][]=ExcelReader.getData("Users1");
+		
+		return arr;
+	}
+	
+	
 
+	@DataProvider(name="userData2")
+	public static Object[][] getUserData2()
+	{
+		
+		Object arr[][]=ExcelReader.getData("Users2");
+		
+		return arr;
+	}
+	
 }

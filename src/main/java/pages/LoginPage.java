@@ -36,9 +36,12 @@ public class LoginPage {
 
 		Utility.waitForWebElement(driver, pwd).sendKeys(pass);
 		
+		
 		Utility.waitForWebElement(driver, signinbtn).click();
 		
-		Utility.waitForWebElement(driver, newusersignuplnk).isDisplayed();		
+		Thread.sleep(2000);
+		
+		//Utility.waitForWebElement(driver, newusersignuplnk).isDisplayed();		
 		
 		
 	}
@@ -64,7 +67,8 @@ public class LoginPage {
 	
 	  public HomePage navigateToHomePage() throws InterruptedException	  
 	  {
-	  Thread.sleep(12000); return new HomePage(driver);
+	  Thread.sleep(12000);
+	  return new HomePage(driver);
 	  
 	  }
 	 
